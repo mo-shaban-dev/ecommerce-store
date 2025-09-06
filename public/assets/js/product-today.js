@@ -1,20 +1,17 @@
- 
+class ProductToday {
+    constructor(id, image, name, rating, price, category, description, Class) {
+        this.id = id;
+        this.image = image;
+        this.name = name;
+        this.rating = rating;
+        this.priceCents = price;
+        this.category = category;
+        this.description = description;
+        this.class = Class;
+    }
 
-    $(() => {
-        class ProductToday {
-        constructor(id, image, name, rating, price, category, description, Class) {
-            this.id = id;
-            this.image = image;
-            this.name = name;
-            this.rating = rating;
-            this.priceCents = price;
-            this.category = category;
-            this.description = description;
-            this.class = Class
-        }
-
-        RenderProductToday() {
-            return `
+    RenderProductToday() {
+        return `
         <div class=" swiper-slide ${this.class}">
             <div 
                 data-id="${this.id}"
@@ -46,26 +43,28 @@
                 </div>
             </div>
         </div>`;
-        }
     }
+}
+ 
+
+function FetchProducts() {
     fetch("products.json")
         .then((res) => res.json())
         .then((json) => {
-            
-            // filter to get the Top rating   
-            let allProducts = json.sort((b, a)=> {
+            // filter to get the Top rating
+            let allProducts = json.sort((b, a) => {
                 return b.rating.stars - b.rating.stars;
             });
             console.log(allProducts);
-            // slice to get just 10 product 
+            // slice to get just 10 product
             let tenProducts = allProducts.slice(0, 10);
 
-            console.log(tenProducts)
+            console.log(tenProducts);
             let container = document.querySelector("#swiper-container");
             let products = "";
-            
+
             tenProducts.forEach((item, index) => {
-                 let isActive = index === 0 ? "active" : "";
+                let isActive = index === 0 ? "active" : "";
                 let product = new ProductToday(
                     item.id,
                     item.image,
@@ -74,16 +73,17 @@
                     item.priceCents,
                     item.category,
                     item.description,
-                    item.class = isActive,
+                    (item.class = isActive)
                 );
                 products += product.RenderProductToday();
             });
             container.innerHTML = products;
-            initSwiper()
-            
+            initSwiper();
         })
         .catch((err) => console.error(`the error : ${err}`));
-});
+}
+FetchProducts();
+
 //------------------ problem---------------
 // go to Product Details
 $(document).ready(function () {
@@ -110,5 +110,5 @@ $(document).ready(function () {
         window.location.href = "product-details.html";
     });
 });
+
 //------------------ problem---------------
- 
