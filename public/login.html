@@ -9,6 +9,7 @@
     <!-- 1. Include Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <link rel="stylesheet" href="./assets/css/style.css">
 
     <!-- <link rel="stylesheet" href="./assets/css/bootstrap.css"> -->
     <title>Login</title>
@@ -103,6 +104,21 @@
     <script src="./assets/js/jQuery.mini.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+    <script>
+        const isUnderConstruction = true;
+        if (isUnderConstruction) {
+            const maintenanceHTML = `
+                    <div style="display:flex; justify-content:center; align-items:center; height:100vh; flex-direction:column; text-align:center;">
+                        <div style="...;">
+                            <h1>هذه الصفحة تحت الإنشاء</h1>
+                            <p>نحن نعمل على تحسينها. يرجى العودة لاحقاً.</p>
+                            <div class="loader"></div>
+                        </div>
+                    </div>
+                `;
+            document.body.innerHTML = maintenanceHTML;
+        }
+    </script>
 </body>
 
 </html>

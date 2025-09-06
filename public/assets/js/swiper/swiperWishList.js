@@ -2,7 +2,7 @@ function initWishlistSwiper() {
     const swiper = new Swiper(".swiper-wishlist", {
         slidesPerView: 1,
         spaceBetween: 20,
-        loop: false, // خليه false علشان ما يديش تحذيرات لو المنتجات قليلة
+        loop: false, 
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
