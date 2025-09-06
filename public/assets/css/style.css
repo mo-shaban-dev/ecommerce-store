@@ -95,7 +95,7 @@ header {
      transition: all 0.3s ease;
      background-color: #dc3545;
      color: #fff;
-     animation: hero-btn 2s linear infinite;
+     animation: hero-btn 2s   infinite;
  }
 
  .hero-button:hover {
@@ -106,13 +106,18 @@ header {
 
  @keyframes hero-btn {
     0% {
-        box-shadow: #dc354678 2px 3px 5px;
+        box-shadow: #dc35464b 0px 0px 2px 2px;
+        transform: scale(0.95);
     }
     75% {
-        box-shadow: #dc3546a8 1px 1px 10px 10px;
+        box-shadow: #dc354680 0px 0px 12px 12px;
+        transform: scale(0.98);
+        
     }
     100% {
-        box-shadow: #dc354678 2px 3px 5px;
+        box-shadow: #dc35464b 0px 0px 2px 2px;
+        transform: scale(0.95);
+         
     }
  }
  /* Responsive adjustments */
