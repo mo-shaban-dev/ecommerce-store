@@ -22,22 +22,17 @@
         <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top" data-bs-theme="light"
             aria-label="Main navigation">
             <div class="container">
-                <!-- الشعار / اسم الموقع -->
                 <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-                    <!-- مثال أيقونة لوجو -->
                     <i class="fa-solid fa-bag-shopping"></i>
                     <span class="fw-semibold">ShopMate</span>
                 </a>
 
-                <!-- زر القائمة في الموبايل -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
                     aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <!-- عناصر النافبار -->
                 <div class="collapse navbar-collapse" id="mainNav">
-                    <!-- روابط أساسية (على اليسار بالعربي لو RTL شغّال؛ وإلا استخدم me-auto/ms-auto للتحكم) -->
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="index.html">الرئيسية</a>
@@ -47,7 +42,6 @@
                             <a class="nav-link" href="products.html">المنتجات</a>
                         </li>
 
-                        <!-- قائمة منسدلة (تصنيفات مثلاً) -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -72,13 +66,11 @@
                         </li>
                     </ul>
 
-                    <!-- فورم بحث بسيط -->
                     <form class="d-flex me-lg-3 mb-2 mb-lg-0" role="search" action="products.html" method="get">
                         <input class="form-control" type="search" name="q" placeholder="ابحث عن منتج..."
                             aria-label="Search">
                     </form>
 
-                    <!-- أيقونات الحساب والسلة -->
                     <div class="d-flex align-items-center gap-3 mx-2">
                         <a href="wishlist.html">
                             <i class="fa-regular fa-heart"></i>
@@ -87,7 +79,6 @@
                             <i class="fa-regular fa-user me-1"></i> </a>
                         <a href="cart.html" class="position-relative">
                             <i class="fa-solid fa-cart-shopping me-1"></i>
-                            <!-- عدّاد السلة -->
                             <span
                                 class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
                                 id="cartCount">
